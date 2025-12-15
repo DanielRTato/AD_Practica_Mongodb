@@ -2,9 +2,11 @@ package org.example.service;
 
 import org.example.model.Adestrador;
 import org.example.repository.AdestradorRepository;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class AdestradorService {
 
     private final AdestradorRepository adestradorRepo;

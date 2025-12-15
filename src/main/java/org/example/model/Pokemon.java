@@ -1,5 +1,6 @@
 package org.example.model;
 
+import org.example.service.AdestradorService;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -14,7 +15,8 @@ public class Pokemon {
     private List<String> tipo;
     private int nivel;
     private List<String> habilidades;
-    private String adestradorId; // Guardar el ID del adestrador
+
+    private Adestrador adestradorId; // Guardar el ID del adestrador permite String o ObjectId
 
     public String getId() {
         return id;
@@ -56,11 +58,11 @@ public class Pokemon {
         this.habilidades = habilidades;
     }
 
-    public String getAdestradorId() {
+    public Object getAdestradorId() {
         return adestradorId;
     }
 
-    public void setAdestradorId(String adestradorId) {
+    public void setAdestradorId(Adestrador adestradorId) {
         this.adestradorId = adestradorId;
     }
 }

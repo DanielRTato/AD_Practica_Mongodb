@@ -10,13 +10,15 @@
         <relativePath/>
     </parent>
     <groupId>org.example</groupId>
-    <artifactId>MongonatorPokemonAdestrador</artifactId>
+    <artifactId>Ad_Practica1_Mongodb</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <!-- define restdocs version so plugin dependency resolves -->
+        <spring-restdocs.version>3.0.3</spring-restdocs.version>
     </properties>
 
     <dependencies>
@@ -78,6 +80,10 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <!-- Pass JVM args when running with `mvn spring-boot:run` or when the plugin starts the app -->
+                    <jvmArguments>--enable-native-access=ALL-UNNAMED</jvmArguments>
+                </configuration>
             </plugin>
         </plugins>
     </build>
