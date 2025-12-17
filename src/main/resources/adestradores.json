@@ -1,0 +1,23 @@
+[
+    {
+        "nome": "Ash Ketchum",
+        "idade": 10,
+        "cidade": "Pueblo Paleta"
+    },
+    {
+        "nome": "Misty",
+        "idade": 12,
+        "cidade": "Ciudad Celeste"
+    },
+    {
+        "nome": "Brock",
+        "idade": 15,
+        "cidade": "Ciudad Plateada"
+    },
+    {
+        "nome": "Gary Oak",
+        "idade": 10,
+        "cidade": "Pueblo Paleta"
+    }
+]
+

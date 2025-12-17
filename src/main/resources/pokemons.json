@@ -1,0 +1,33 @@
+[
+    {
+        "nome": "Pikachu",
+        "tipo": ["Eléctrico"],
+        "nivel": 25,
+        "habilidades": ["Impactrueno", "Rayo", "Ataque Rápido", "Cola Férrea"]
+    },
+    {
+        "nome": "Charizard",
+        "tipo": ["Fuego", "Volador"],
+        "nivel": 50,
+        "habilidades": ["Lanzallamas", "Vuelo", "Garra Dragón", "Llamarada"]
+    },
+    {
+        "nome": "Blastoise",
+        "tipo": ["Agua"],
+        "nivel": 45,
+        "habilidades": ["Hidrobomba", "Pistola Agua", "Refugio", "Cabezazo"]
+    },
+    {
+        "nome": "Venusaur",
+        "tipo": ["Planta", "Veneno"],
+        "nivel": 48,
+        "habilidades": ["Rayo Solar", "Látigo Cepa", "Polvo Veneno", "Danza Pétalo"]
+    },
+    {
+        "nome": "Gengar",
+        "tipo": ["Fantasma", "Veneno"],
+        "nivel": 40,
+        "habilidades": ["Bola Sombra", "Hipnosis", "Comesueños", "Lengüetazo"]
+    }
+]
+
