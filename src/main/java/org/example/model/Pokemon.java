@@ -15,8 +15,7 @@ public class Pokemon {
     private List<String> tipo;
     private int nivel;
     private List<String> habilidades;
-
-    private Adestrador adestradorId; // Guardar el ID del adestrador permite String o ObjectId
+    private String adestradorId;
 
     public String getId() {
         return id;
@@ -58,11 +57,11 @@ public class Pokemon {
         this.habilidades = habilidades;
     }
 
-    public Object getAdestradorId() {
+    public String getAdestradorId() {
         return adestradorId;
     }
 
-    public void setAdestradorId(Adestrador adestradorId) {
+    public void setAdestradorId(String adestradorId) {
         this.adestradorId = adestradorId;
     }
 }

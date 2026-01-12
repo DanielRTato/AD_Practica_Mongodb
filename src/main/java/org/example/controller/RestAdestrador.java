@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.io.IOException;
 import java.util.List;
 
 @RestController
@@ -17,16 +18,28 @@ public class RestAdestrador {
     @Autowired
     private AdestradorService adestradorService;
 
-    @PostMapping("gardar")
+    @PostMapping("/gardar")
     public ResponseEntity<Adestrador> gardar(@RequestBody Adestrador adestrador) {
         adestradorService.crearAdestrador(adestrador);
+
         return ResponseEntity.ok(adestrador);
+    }
+
+    @PostMapping("/importarJSON")
+    public ResponseEntity<List<Adestrador>> importarJSON() {
+        try {
+            List<Adestrador> list_adestrador = adestradorService.importarDesdeJSON("adestradores.json");
+            return ResponseEntity.ok(list_adestrador);
+        } catch (IOException e) {
+            return ResponseEntity.internalServerError().build();
+        }
     }
 
     @GetMapping("/listarTodos")
     public ResponseEntity<List<Adestrador>> listarColeccion() {
-        List<Adestrador> adestradors = adestradorService.buscarAdestradores();
-        return ResponseEntity.ok(adestradors);
+        List<Adestrador> list_adestradores = adestradorService.buscarAdestradores();
+
+        return ResponseEntity.ok(list_adestradores);
     }
 
 
